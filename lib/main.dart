@@ -31,10 +31,11 @@ class MyApp extends StatelessWidget {
           return ScreenUtilInit(
             designSize: Size(414, 815),
             builder: () => MaterialApp(
-              title: 'Flutter Demo',
+              title: 'Star Movie',
+              debugShowCheckedModeBanner: false,
               theme: ThemeData(
-                primarySwatch: Colors.yellow,
-                
+                primaryColor: Color.fromRGBO(45, 45, 69, 1),
+                accentColor: Color.fromRGBO(243, 164, 177, 1),
               ),
               routes: routes,
               initialRoute:

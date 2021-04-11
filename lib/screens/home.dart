@@ -4,7 +4,7 @@ import 'package:dwmgex/exercices/exo5.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title = 'Home'}) : super(key: key);
+  MyHomePage({Key key, this.title = 'STAR MOVIE'}) : super(key: key);
   final String title;
 
   @override
@@ -40,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(45, 45, 69, 1),
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -47,20 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: _widgets[_selectedIndex],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.work), label: 'Exo 1'),
-          BottomNavigationBarItem(icon: Icon(Icons.work), label: 'Exo 2'),
-        ],
-        selectedItemColor: Colors.indigo,
-        onTap: (index) {
-          setState(() {
-            _selectedIndex = index;
-          });
-        },
-      ),
+    
     );
   }
 }

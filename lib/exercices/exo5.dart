@@ -20,7 +20,7 @@ class _CarouselImagesState extends State<CarouselImages> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text('Welcome to our Cinema',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.blue)),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
           SizedBox(
             height: 25,
           ),
@@ -77,11 +77,11 @@ class _CarouselImagesState extends State<CarouselImages> {
                                 height: 20,
                               ),
                               Text(snapshot.data[index].title,
-                              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.blue)),
+                              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
                               Text(snapshot.data[index].year,
-                              style: TextStyle(fontSize: 22, fontWeight: FontWeight.normal, color: Colors.blue)),
+                              style: TextStyle(fontSize: 22, fontWeight: FontWeight.normal, color: Colors.white)),
                               Text(snapshot.data[index].kind.toString(),
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal, color: Colors.blue)),
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal, color: Colors.white)),
                             ],
                           );
                         },

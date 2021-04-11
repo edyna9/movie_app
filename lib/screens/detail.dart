@@ -14,6 +14,7 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     final Movie movie = ModalRoute.of(context).settings.arguments;
     return Scaffold(
+      backgroundColor: Color.fromRGBO(45, 45, 69, 1),
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
@@ -24,17 +25,17 @@ class _DetailPageState extends State<DetailPage> {
               })
         ],
       ),
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-
             Column(
               children: [
                 Container(
                 child: Image.network(
                   movie.poster,
                 ),
-                  height: 250,
+                
+                  height: 500,
                 ),
               ],
             ),
@@ -43,42 +44,43 @@ class _DetailPageState extends State<DetailPage> {
               padding: const EdgeInsets.all(5),
               child: Text(
                 movie.title,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.blue),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: Colors.white),
               ),
             ),
 
 
             Text(
               movie.year + ' - '+ movie.runtime + ' min',
-              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.white),
             ),
 
             Text(
               movie.kind.toString(),
-              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 14, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 14, color: Colors.white),
             ),
 
             Text('Actors',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),
+
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
             ),
 
             Text(
               movie.actors.toString(),
-              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.white),
             ),
            
 
             Text('Synopsis',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
             ),
 
             Text(
               movie.plot,
-              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.white),
             ),
 
             Text('Release Date',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
             ),
 
 
@@ -88,12 +90,12 @@ class _DetailPageState extends State<DetailPage> {
 
             Text(
               movie.releaseDate.toString(),
-              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.normal, fontSize: 16, color: Colors.white),
             ),
 
 
             Text('Raitings',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),
             ),
 
 
@@ -110,11 +112,11 @@ class _DetailPageState extends State<DetailPage> {
 
                 Text(
                   movie.ratings[0]['source'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blue),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
                 ),
                 Text(
                   ' value :' + movie.ratings[0]['value'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blue),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
                 ),
 
 
@@ -132,11 +134,11 @@ class _DetailPageState extends State<DetailPage> {
 
                 Text(
                   movie.ratings[1]['source'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blue),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
                 ),
                 Text(
                   ' value :' + movie.ratings[1]['value'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blue),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
                 ),
 
 
@@ -153,11 +155,11 @@ class _DetailPageState extends State<DetailPage> {
 
                 Text(
                   movie.ratings[2]['source'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blue),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
                 ),
                 Text(
                   ' value :' + movie.ratings[2]['value'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.blue),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Colors.white),
                 ),
           ],
         ),

@@ -17,29 +17,32 @@ class CustomDrawer extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                          'https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80'),
+                          'https://www.ionos.fr/digitalguide/fileadmin/DigitalGuide/Teaser/movie-maker-alternative.jpg'),
                       fit: BoxFit.cover),
                 ),
-                child: Text('Flutter',
+                child: Text('STAR MOVIE',
                     style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 24))),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.white))),
           ),
           ListTile(
-            title: Text('Home'),
+            title: Text('Home',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color.fromRGBO(45, 45, 69, 1))),
             leading: Icon(Icons.home),
             onTap: () {
               Navigator.pushReplacementNamed(context, '/home');
             },
           ),
           ListTile(
-            title: Text('Profile'),
+            title: Text('Profile',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color.fromRGBO(45, 45, 69, 1))),
             leading: Icon(Icons.person),
             onTap: () {
               Navigator.pushNamed(context, '/profile');
             },
           ),
           ListTile(
-            title: Text('School'),
+            title: Text('School',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color.fromRGBO(45, 45, 69, 1))),
             leading: Icon(Icons.school),
             onTap: () {
               Navigator.pushNamed(context, '/school');
